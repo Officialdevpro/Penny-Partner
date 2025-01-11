@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penny Partner</title>
+    <link rel="icon" href="images/app-logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/mediaQuery.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/budget.css" />
+    <link rel="stylesheet" href="css/review.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="main">
+        <div class="left">
+          <img class="hamburger svg" src="icons/hamburger.svg" alt="" />
+          <h2>Penny Partner</h2>
+        </div>
+        <img class="svg download-app" src="icons/download.svg" alt="" />
+      </header>
+      <div class="side-footer">
+        <ul class="menu">
+          <li class="active">
+            <img class="svg" src="icons/home.svg" alt="" />
+            <p>Home</p>
+          </li>
+          <li class="chart-section">
+            <img class="svg" src="icons/analysis.svg" alt="" />
+            <p>Dashboard</p>
+          </li>
+          <li class="skeleton-budget">
+            <img class="svg" src="icons/calculator.svg" alt="" />
+            <p>Budgets</p>
+          </li>
+          <li class="skeleton-account">
+            <img class="svg" src="icons/account.svg" alt="" />
+            <p>Accounts</p>
+          </li>
+          <li class="skeleton-category">
+            <img class="svg" src="icons/category.svg" alt="" />
+            <p>Categories</p>
+          </li>
+        </ul>
+      </div>
+      <main>
+        <section class="home active">
+          <div class="home-container">
+            <div class="skeleton home-skeleton-effect">
+              <div class="skeleton-month-body">
+                <h3 class="skeleton-month"></h3>
+              </div>
+              <div class="skeleton-balance-info">
+                <div class="skeleton-expense-box"></div>
+                <div class="skeleton-income-box"></div>
+                <div class="skeleton-total-box"></div>
+              </div>
+            </div>
+            <div class="skeleton-outer home-skeleton-effect">
+              <ul class="skeleton-inner">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <header>
+              <div class="month-body">
+                <div class="header-left-space"></div>
+                <div class="header-right-space"></div>
+                <div class="left-arrow"></div>
+                <h3 class="month"></h3>
+                <div class="right-arrow"></div>
+              </div>
+              <div class="balance-info">
+                <div class="expense-box">
+                  <p>EXPENSE</p>
+                  <p class="red stylish">
+                    <span class="currency-symbol home-cs"></span>0.00
+                  </p>
+                </div>
+                <div class="income-box">
+                  <p>INCOME</p>
+                  <p class="green stylish">
+                    <span class="currency-symbol"></span>0.00
+                  </p>
+                </div>
+                <div class="total-box">
+                  <p>TOTAL</p>
+                  <p class="green stylish">
+                    <span class="currency-symbol"></span>0.00
+                  </p>
+                </div>
+              </div>
+            </header>
+            <div class="main-content"></div>
+            <div class="parent-detail-view">
+              <div class="detail-view-container">
+                <div class="card-top">
+                  <div class="card-header">
+                    <img
+                      style="filter: invert(1)"
+                      src="./icons/close.svg"
+                      alt="close"
+                      class="close-card"
+                    />
+                    <div class="card-operations">
+                      <img
+                        class="svg delete-history"
+                        src="./icons/delete.svg"
+                        alt=""
+                      />
+                      <img
+                        class="svg edit-history"
+                        src="./icons/edit.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="center-content">
+                    <p
+                      class="category-name-detail"
+                      style="text-transform: uppercase"
+                    >
+                      INCOME
+                    </p>
+                    <p class="respective-amount">
+                      <span class="currency-symbol"></span>0.00
+                    </p>
+                  </div>
+                  <small class="date-time-details">Aug 18,2024 8:26 PM</small>
+                </div>
+                <div class="card-bottom">
+                  <ul>
+                    <li>
+                      <p class="accname">Account</p>
+                      <div class="detail-box">
+                        <img
+                          class="accountImg"
+                          src="./Accounts/wallet_3258446.png"
+                          alt=""
+                        />
+                        <p class="a-info"></p>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="catename">Category</p>
+                      <div class="detail-box">
+                        <img
+                          class="categoryImg"
+                          src="./icons/Income-expense/refunds.jpg"
+                          alt=""
+                        />
+                        <p class="c-info"></p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="notes">
+                    <p>No notes...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="add-item active">
+              <div class="plus"></div>
+            </div>
+            <div class="input-containers">
+              <div class="top-portion">
+                <div class="head">
+                  <div class="li">
+                    <img class="svg" src="./icons/close.svg" alt="" />
+                    <p class="semi-bold input-box-close">CANCEL</p>
+                  </div>
+                  <div class="li add-transcation-save-btn">
+                    <img class="svg" src="icons/tick.svg" alt="" />
+                    <p class="semi-bold helper">SAVE</p>
+                  </div>
+                </div>
+                <input type="text" hidden value="1" id="category-ticked" />
+                <ul class="sub-head-one">
+                  <li class="income-body" value="0">
+                    <img class="svg" src="" alt="" />
+                    <p class="semi-bold">INCOME</p>
+                  </li>
+                  <li class="expense-body" value="1">
+                    <img class="svg" src="icons/tick.svg" alt="" />
+                    <p class="semi-bold">EXPENSE</p>
+                  </li>
+                  <li class="transfer-body" value="2">
+                    <img class="svg" src="" alt="" />
+                    <p class="semi-bold">TRANSFER</p>
+                  </li>
+                </ul>
+                <div class="sub-head-two">
+                  <div class="account-body">
+                    <p class="change-font-style">Account</p>
+                    <div class="child-body" data-id="7876543310">
+                      <p class="semi-bold">Account</p>
+                      <img class="svg" src="icons/account.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="category-body">
+                    <p class="change-font-style">Category</p>
+                    <div class="child-body" data-id="2876543210">
+                      <p class="semi-bold">Category</p>
+                      <img class="svg" src="icons/category.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="notes-box">
+                  <textarea
+                    name=""
+                    id="description-notes"
+                    placeholder="Add notes"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="main-input-box">
+                <div class="calc-display">
+                  <div class="calc-values"></div>
+                  <div class="calc-answer"></div>
+                </div>
+              </div>
+              <div class="calculator">
+                <div class="calc-body">
+                  <div class="sub-division">
+                    <button value="*" class="btns multiply">x</button>
+                    <button value="7" class="btns">7</button>
+                    <button value="8" class="btns">8</button>
+                    <button value="9" class="btns">9</button>
+                  </div>
+                  <div class="sub-division">
+                    <button value="-" class="btns sub">-</button>
+                    <button value="4" class="btns">4</button>
+                    <button value="5" class="btns">5</button>
+                    <button value="6" class="btns">6</button>
+                  </div>
+                  <div class="sub-division">
+                    <button value="+" class="btns add">+</button>
+                    <button value="1" class="btns">1</button>
+                    <button value="2" class="btns">2</button>
+                    <button value="3" class="btns">3</button>
+                  </div>
+                  <div class="sub-division">
+                    <button value="/" class="btns division">÷</button>
+                    <button value="c" class="btns clear">C</button>
+                    <button value="0" class="btns">0</button>
+                    <button value="=" class="equal btns">=</button>
+                  </div>
+                </div>
+              </div>
+              <div class="account-options-body">
+                <h2>Select an account</h2>
+                <div class="parent-b">
+                  <ul class="parent-box"></ul>
+                </div>
+              </div>
+              <div class="category-options-body">
+                <h2>Select Category</h2>
+                <ul class="parent-box"></ul>
+              </div>
+              <!-- Tostal -->
+              <div class="success-tostal">
+                <div class="x-icon">
+                  <div class="bar-1"></div>
+                  <div class="bar-2"></div>
+                </div>
+                <div class="message-box">
+                  <p class="message">Error</p>
+                  <p class="text">Select the requierd fields</p>
+                </div>
+                <div class="success-line"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="analysis">
+          <div class="analysis-container">
+            <header>
+              <div class="month-body">
+                <div class="header-left-space"></div>
+                <div class="header-right-space"></div>
+                <div class="left-arrow"></div>
+                <h3 class="month"></h3>
+                <div class="right-arrow"></div>
+              </div>
+              <div class="balance-info">
+                <div class="expense-box">
+                  <p>EXPENSE</p>
+                  <p class="red stylish">
+                    <span class="currency-symbol"></span> 0.00
+                  </p>
+                </div>
+                <div class="income-box">
+                  <p>INCOME</p>
+                  <p class="green stylish">
+                    <span class="currency-symbol"></span> 0.00
+                  </p>
+                </div>
+                <div class="total-box">
+                  <p>TOTAL</p>
+                  <p class="green stylish">
+                    <span class="currency-symbol"></span>0.00
+                  </p>
+                </div>
+              </div>
+            </header>
+            <div class="chart-options">
+              <div class="current-chart">
+                <div class="opt-body">
+                  <div class="arrow-down"></div>
+                  <p class="semi-bold current-view">INCOME OVERVIEW</p>
+                </div>
+                <div class="category-options">
+                  <p class="semi-bold income-view">Income Overview</p>
+                  <p class="semi-bold expense-view">Expense Overview</p>
+                </div>
+              </div>
+            </div>
+            <div class="chart" style="height: 400px">
+              <canvas width="400" height="400" id="myChart"></canvas>
+            </div>
+            <div class="text-view">
+              <ul class="data-container"></ul>
+            </div>
+          </div>
+        </section>
+        <section id="bud" class="budgets loading">
+          <div class="budget-skeleton">
+            <div class="spent-categorie-skeleton down-bu">
+              <h3></h3>
+              <div class="category-budgets-skeleton">
+                <ul class="set-list-skeleton"></ul>
+              </div>
+            </div>
+            <div class="spent-categorie-skeleton">
+              <h3></h3>
+              <div class="category-budgets-skeleton">
+                <ul class="budget-list-skeleton"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="budget-container">
+            <header>
+              <div class="head-content">
+                <div class="month-info">
+                  <div class="header-left-space"></div>
+                  <div class="header-right-space"></div>
+                  <div class="left-arrow"></div>
+                  <h3 class="month"></h3>
+                  <div class="right-arrow"></div>
+                </div>
+                <div class="budget-info">
+                  <div class="total-budget">
+                    <p>TOTAL BUDGET</p>
+                    <b class="green stylish"
+                      ><span class="currency-symbol"></span> 0.00</b
+                    >
+                  </div>
+                  <div class="spent-budget">
+                    <p>SPENT BUDGET</p>
+                    <b class="red stylish"
+                      ><span class="currency-symbol"></span> 0.00</b
+                    >
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="budgeted-categories">
+              <h3>Budgeted categories</h3>
+              <div class="set-budgeted-container">
+                <ul class="set-budgeted-list"></ul>
+              </div>
+            </div>
+            <div class="spent-categories">
+              <h3>Not budgeted this month</h3>
+              <div class="category-budgets">
+                <ul class="budget-list"></ul>
+              </div>
+            </div>
+          </div>
+          <!-- set Budget -->
+          <div class="budget-input-container">
+            <header>
+              <h3>Set Budget</h3>
+              <h3 class="opacity"></h3>
+            </header>
+            <div class="budget-card">
+              <div class="card-body">
+                <img class="icon set-budget-icon" src="" alt="" />
+                <div class="card-info">
+                  <p class="bold budget-category-name"></p>
+                </div>
+              </div>
+            </div>
+            <div class="form-container">
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  pattern="[0-9]*"
+                  required
+                  type="tel"
+                  id="budget-value"
+                  maxlength="7"
+                />
+                <label for="budget-value">Enter Limit</label>
+              </div>
+              <div class="account-btns">
+                <button class="cancel-budget-box">Cancle</button>
+                <button class="set-limit">Update</button>
+              </div>
+            </div>
+          </div>
+          <!-- change limit -->
+          <div class="budget-edit-container">
+            <header>
+              <h3>Edit Budget</h3>
+              <h3 class="opacity"></h3>
+            </header>
+            <div class="budget-card">
+              <div class="card-body">
+                <img
+                  class="icon edit-budget-icon"
+                  src="./icons/Income-expense/dress.jpg"
+                  alt=""
+                />
+                <div class="card-info">
+                  <p class="bold edit-category-name">Dress</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-container">
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  pattern="[0-9]*"
+                  required
+                  type="tel"
+                  id="budget-updated-value"
+                  maxlength="7"
+                />
+                <label for="budget-value">Enter Limit</label>
+              </div>
+              <div class="account-btns">
+                <button class="cancel-edit-box">Cancle</button>
+                <button class="updated-limit">Update</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="account">
+          <div class="account-container">
+            <header class="account-header">
+              <h3 class="deactivate">Overall</h3>
+              <h3 class="skeleton-title"></h3>
+              <div class="penny-info">
+                <div class="top">
+                  <div class="expense expense-box">
+                    <p>EXPENSE SO FAR</p>
+                    <p class="red stylish account-page-expense">
+                      <span class="currency-symbol"></span>
+                      0.00
+                    </p>
+                  </div>
+                  <div class="income income-box">
+                    <p>INCOME SO FAR</p>
+                    <p class="green stylish account-page-income">
+                      <span class="currency-symbol"></span>
+                      0.00
+                    </p>
+                  </div>
+                </div>
+                <div class="bottom total-box">
+                  <p>All accounts balance:</p>
+                  <p class="bold account-total-amount">
+                    <span class="currency-symbol account-cs"></span>0.00
+                  </p>
+                </div>
+              </div>
+              <div class="skeleton-penny-info"></div>
+            </header>
+            <div class="account-container">
+              <h3 class="deactivate">Accounts</h3>
+              <ul class="accounts"></ul>
+            </div>
+            <div class="add-account deactivate">
+              <div class="add-box">
+                <img class="svg" src="icons/plus.svg" alt="" />
+                <p>ADD NEW ACCOUNT</p>
+              </div>
+            </div>
+          </div>
+          <!-- add account -->
+          <div class="box-body">
+            <header><h3>Add New Account</h3></header>
+            <div class="input-container">
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  pattern="[0-9]*"
+                  required
+                  type="tel"
+                  id="initial-amount"
+                  maxlength="10"
+                />
+                <label for="initial-amount">Initial amount</label>
+              </div>
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  type="text"
+                  required
+                  id="account-name"
+                  maxlength="15"
+                />
+                <label for="account-name">Account name</label>
+              </div>
+            </div>
+            <div class="account-icons-parent">
+              <p>Select icons</p>
+              <ul class="account-list">
+                <li class="active">
+                  <img src="Accounts/currency-notes_15326442.png" alt="" />
+                </li>
+                <li><img src="Accounts/atm-card_8983163.png" alt="" /></li>
+                <li>
+                  <img src="Accounts/piggy-bank_15326531 (2).png" alt="" />
+                </li>
+                <li><img src="Accounts/dollar-bag_15326399.png" alt="" /></li>
+                <li><img src="Accounts/bank.png" alt="" /></li>
+                <li><img src="Accounts/wallet_3258446.png" alt="" /></li>
+                <li><img src="Accounts/canaraBank.png" alt="" /></li>
+                <li><img src="Accounts/bitcoin_1490849.png" alt="" /></li>
+                <li>
+                  <img src="Accounts/business-target_15326317.png" alt="" />
+                </li>
+                <li><img src="Accounts/indianBank.png" alt="" /></li>
+                <li>
+                  <img src="Accounts/currency-exchange_15326510.png" alt="" />
+                </li>
+                <li><img src="Accounts/visa.png" alt="" /></li>
+                <li><img src="Accounts/gpay.png" alt="" /></li>
+                <li><img src="Accounts/economy_3258522.png" alt="" /></li>
+                <li><img src="Accounts/apay.png" alt="" /></li>
+                <li><img src="Accounts/sbi.png" alt="" /></li>
+                <li><img src="Accounts/bank_12161294.png" alt="" /></li>
+              </ul>
+            </div>
+            <div class="account-btns">
+              <button class="cancel-add-account">cancle</button>
+              <button class="save-accont-btn">Save</button>
+            </div>
+          </div>
+          <!-- edit account -->
+          <div class="edit-box-body">
+            <header><h3>Edit Account</h3></header>
+            <div class="input-container">
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  pattern="[0-9]*"
+                  required
+                  type="tel"
+                  id="edit-amount"
+                  maxlength="10"
+                />
+                <label for="initial-amount">Amount</label>
+              </div>
+              <div class="input-body">
+                <input autocomplete="off" type="text" required
+                id="edit-account-name" maxlength="15 />
+                <label for="edit-account-name">Account name</label>
+              </div>
+            </div>
+            <div class="account-icons-parent">
+              <p>Select icons</p>
+              <ul class="account-list">
+                <li class="active">
+                  <img src="Accounts/currency-notes_15326442.png" alt="" />
+                </li>
+                <li><img src="Accounts/atm-card_8983163.png" alt="" /></li>
+                <li>
+                  <img src="Accounts/piggy-bank_15326531 (2).png" alt="" />
+                </li>
+                <li><img src="Accounts/dollar-bag_15326399.png" alt="" /></li>
+                <li><img src="Accounts/bank.png" alt="" /></li>
+                <li><img src="Accounts/wallet_3258446.png" alt="" /></li>
+                <li><img src="Accounts/canaraBank.png" alt="" /></li>
+                <li><img src="Accounts/bitcoin_1490849.png" alt="" /></li>
+                <li>
+                  <img src="Accounts/business-target_15326317.png" alt="" />
+                </li>
+                <li><img src="Accounts/indianBank.png" alt="" /></li>
+                <li>
+                  <img src="Accounts/currency-exchange_15326510.png" alt="" />
+                </li>
+                <li><img src="Accounts/visa.png" alt="" /></li>
+                <li><img src="Accounts/gpay.png" alt="" /></li>
+                <li><img src="Accounts/economy_3258522.png" alt="" /></li>
+                <li><img src="Accounts/apay.png" alt="" /></li>
+                <li><img src="Accounts/sbi.png" alt="" /></li>
+                <li><img src="Accounts/bank_12161294.png" alt="" /></li>
+              </ul>
+            </div>
+            <div class="account-btns">
+              <button class="cancelEdit">cancle</button>
+              <button class="updateBtn">Update</button>
+            </div>
+          </div>
+        </section>
+        <section class="categories">
+          <div class="category-container">
+            <div class="income-category-skeleton">
+              <h3></h3>
+              <ul class="income-list-skeketon"></ul>
+            </div>
+            <div class="expense-category-skeleton">
+              <h3></h3>
+              <ul class="expense-list-skeketon"></ul>
+            </div>
+            <div class="income-category active-category">
+              <h3>Income categories</h3>
+              <ul class="income-list"></ul>
+            </div>
+            <div class="expense-category active-category">
+              <h3>Expense categories</h3>
+              <ul class="expense-list"></ul>
+            </div>
+            <div class="add-category active-category">
+              <div class="add-box">
+                <img class="svg" src="icons/plus.svg" alt="" />
+                <p>ADD NEW CATEGORY</p>
+              </div>
+            </div>
+          </div>
+          <!-- add category -->
+          <div class="category-box-body">
+            <header><h3>Add New Category</h3></header>
+            <div class="input-container">
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  type="text"
+                  required
+                  id="category-name"
+                  maxlength="20"
+                />
+                <label for="category-name">Category name</label>
+              </div>
+              <div class="category">
+                <b>Expense</b>
+                <div class="switch"></div>
+                <b>Income</b>
+              </div>
+            </div>
+            <div class="category-icons-parent">
+              <p>Select icon</p>
+              <div class="category-container">
+                <ul class="category-list top">
+                  <li class="active">
+                    <img src="icons/Income-expense/notes.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/cloth.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/food.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/home.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/shopping.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/books.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/rent.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/cylinder.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/haircut.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bike.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cheers.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/box.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bag.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/pc.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/list.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/newspaper.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/ring.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/salary.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/paste.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/settlecork.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/paint.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/electricity.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/babyfoot.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/handbag.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/insurance.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/scooter.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/gold.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/juice.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bicycle.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/shoppingbag.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/awards.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/social.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/watch.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/straberry.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/volyball.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/play.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/heartshape.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/bill.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/camera.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/puncher.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/subscription.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/yoga.jpg" alt="" /></li>
+                  <li>
+                    <img
+                      src="icons/Income-expense/electricityBill.jpg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/wallpaint.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/repair.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/headset.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/officer.png" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/bluestar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/greenstar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/pinkstar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/violetstar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/skybluestar.jpg" alt="" />
+                  </li>
+                </ul>
+                <ul class="category-list bottom">
+                  <li>
+                    <img src="icons/Income-expense/health.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/entertainment.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/petrol.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/phone.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/train.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/gift.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/beauty.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/sofa.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/mobile.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/shoe.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/capsule.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bus.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/batmitan.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/dress.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/vegetables.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/football.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/education.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/chip.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/apple.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/diamond.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/refunds.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/computer.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/coffee.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/airplane.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/grocessory.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/drinks.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/guitar.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/baby.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cake.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bottle.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/rent.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/car.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/person.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cricket.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/milk.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/lottery.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/sales.png" alt="" /></li>
+                  <li><img src="icons/Income-expense/perfume.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cookies.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/plumber.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/iceCream.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/fish.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/tip.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/stritching.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/bonus.png" alt="" /></li>
+                  <li><img src="icons/Income-expense/boil.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/vacation.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/blackstar.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/redstar.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/orangestar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/lightgreenstar.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/circle1.jpg" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="category-btns">
+              <button class="cancel-add-category">cancle</button>
+              <button class="save-category-btn">Save</button>
+            </div>
+          </div>
+          <!-- edit category -->
+          <div class="edit-category-box-body">
+            <header><h3>Edit Category</h3></header>
+            <div class="input-container">
+              <div class="input-body">
+                <input
+                  autocomplete="off"
+                  type="text"
+                  required
+                  id="edit-category-name"
+                />
+                <label for="category-name">Category name</label>
+              </div>
+            </div>
+            <div class="category-icons-parent">
+              <p>Select icon</p>
+              <div class="category-container">
+                <ul class="category-list top">
+                  <li class="active">
+                    <img src="icons/Income-expense/notes.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/cloth.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/food.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/home.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/shopping.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/books.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/rent.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/cylinder.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/haircut.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bike.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cheers.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/box.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bag.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/pc.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/list.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/newspaper.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/ring.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/salary.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/paste.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/settlecork.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/paint.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/electricity.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/babyfoot.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/handbag.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/insurance.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/scooter.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/gold.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/juice.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bicycle.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/shoppingbag.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/awards.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/social.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/watch.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/straberry.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/volyball.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/play.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/heartshape.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/bill.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/camera.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/puncher.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/subscription.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/yoga.jpg" alt="" /></li>
+                  <li>
+                    <img
+                      src="icons/Income-expense/electricityBill.jpg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/wallpaint.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/repair.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/headset.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/officer.png" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/bluestar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/greenstar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/pinkstar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/violetstar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/skybluestar.jpg" alt="" />
+                  </li>
+                </ul>
+                <ul class="category-list bottom">
+                  <li>
+                    <img src="icons/Income-expense/health.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/entertainment.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/petrol.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/phone.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/train.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/gift.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/beauty.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/sofa.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/mobile.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/shoe.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/capsule.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bus.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/batmitan.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/dress.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/vegetables.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/football.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/education.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/chip.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/apple.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/diamond.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/refunds.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/computer.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/coffee.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/airplane.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/grocessory.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/drinks.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/guitar.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/baby.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cake.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/bottle.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/rent.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/car.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/person.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cricket.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/milk.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/lottery.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/sales.png" alt="" /></li>
+                  <li><img src="icons/Income-expense/perfume.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/cookies.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/plumber.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/iceCream.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/fish.jpg" alt="" /></li>
+                  <li><img src="icons/Income-expense/tip.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/stritching.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/bonus.png" alt="" /></li>
+                  <li><img src="icons/Income-expense/boil.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/vacation.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/blackstar.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/redstar.jpg" alt="" /></li>
+                  <li>
+                    <img src="icons/Income-expense/orangestar.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="icons/Income-expense/lightgreenstar.jpg" alt="" />
+                  </li>
+                  <li><img src="icons/Income-expense/circle1.jpg" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="category-btns">
+              <button class="cancel-edit-category">cancle</button>
+              <button class="save-edit-category-btn">Save</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <nav>
+          <ul>
+            <li class="active">
+              <img class="svg" src="icons/home.svg" alt="" />
+              <small>Records</small>
+            </li>
+            <li class="chart-section">
+              <img class="svg" src="icons/analysis.svg" alt="" />
+              <small>Analysis</small>
+            </li>
+            <li class="skeleton-budget">
+              <img class="svg" src="icons/calculator.svg" alt="" />
+              <small>Budgets</small>
+            </li>
+            <li class="skeleton-account">
+              <img class="svg" src="icons/account.svg" alt="" />
+              <small>Accounts</small>
+            </li>
+            <li class="skeleton-category">
+              <img class="svg" src="icons/category.svg" alt="" />
+              <small>categories</small>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+      <div class="sidebar">
+        <img
+          src="icons/close.svg"
+          alt=""
+          class="close"
+          style="filter: invert(1)"
+        />
+        <header>
+          <img class="sun-theme" src="images/sun.png" alt="" />
+          <img class="cloud-2" src="images/cloud.png" alt="" />
+          <img class="cloud-3" src="images/cloud.png" alt="" />
+          <div class="scroll-container">
+            <img src="images/cloud.png" class="cloud" alt="Cloud" />
+          </div>
+          <img class="user-profile" src="" alt="" />
+          <h2 class="home-display-username"></h2>
+        </header>
+        <div class="settings">
+          <ul>
+            <li class="show-my-account">
+              <div class="left-part">
+                <img class="svg" src="icons/user.svg" alt="" />
+                <div class="info">
+                  <p>My account</p>
+                  <small>Veiw your account info</small>
+                </div>
+              </div>
+              <img class="arrow-right" src="./icons/arrowright.svg" alt="" />
+            </li>
+            <li class="theme">
+              <div class="left-part">
+                <img class="svg" src="icons/sun.svg" alt="" />
+                <div class="info">
+                  <p>Preference</p>
+                  <small>Click to change theme</small>
+                </div>
+              </div>
+              <img class="arrow-right" src="./icons/arrowright.svg" alt="" />
+            </li>
+            <li class="view-mode">
+              <div class="left-part">
+                <img class="svg" src="icons/fullscreen.svg" alt="" />
+                <div class="info">
+                  <p>Full Screen</p>
+                  <small>For better user experience</small>
+                </div>
+              </div>
+              <img class="arrow-right" src="./icons/arrowright.svg" alt="" />
+            </li>
+            <li class="rating-reviews">
+              <div class="left-part">
+                <img class="svg" src="icons/star.svg" alt="" />
+                <div class="info">
+                  <p>Reviews Rating</p>
+                  <small>Elevating your experience</small>
+                </div>
+              </div>
+              <img class="arrow-right" src="./icons/arrowright.svg" alt="" />
+            </li>
+            <li class="total-users">
+              <div class="left-part">
+                <img class="svg" src="icons/tusers.svg" alt="" />
+                <div class="info">
+                  <p>Total Users</p>
+                  <small>Penny Partner users</small>
+                </div>
+              </div>
+              <img class="arrow-right" src="./icons/arrowright.svg" alt="" />
+            </li>
+            <li id="invite-friends">
+              <div class="left-part">
+                <img class="svg" src="icons/share.svg" alt="" />
+                <div class="info">
+                  <p>Invite Frineds</p>
+                  <small>Invite your friends & family</small>
+                </div>
+              </div>
+              <img class="arrow-right" src="./icons/arrowright.svg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pp-users-container">
+        <div id="user-count-body" class="hide">
+          <h2>Penny Partner</h2>
+          <div class="outer">
+            <h1 id="user-count">0</h1>
+            <p class="total">Total Users</p>
+          </div>
+          <div class="message-thank"></div>
+          <button class="close-button">CLOSE</button>
+        </div>
+      </div>
+      <div class="rr-container">
+        <div class="review-input-container">
+          <div class="review-input-body">
+            <div class="app-logo-review">
+              <div class="app-logo">
+                <img src="images/app-logo.png" alt="" />
+              </div>
+              <p>Enjoying this app? Rate us!</p>
+            </div>
+            <div class="rating-star-container">
+              <input hidden type="tel" value="0" id="rateValue" />
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+            </div>
+            <div class="review-write">
+              <textarea
+                placeholder="Describe your experience"
+                name=""
+                id="calculate-word-len"
+                maxlength="500"
+              ></textarea>
+              <div class="word-count-body">
+                <small class="word-count">0/500</small>
+              </div>
+            </div>
+            <div class="review-post-body">
+              <button disabled class="review-post-btn">POST</button>
+            </div>
+          </div>
+        </div>
+        <header>
+          <div class="left">
+            <div class="app-header">
+              <img class="svg" src="images/app-logo.png" alt="" />
+              <h2>Penny Partner</h2>
+            </div>
+          </div>
+          <img class="svg write-pen" src="icons/edit.svg" alt="" />
+        </header>
+        <div class="rr-body">
+          <div class="rating-num-left">
+            <h1></h1>
+            <div class="obtained-star-container"></div>
+            <div class="overall-star-container"></div>
+            <small class="nRating">134</small>
+          </div>
+          <div class="rating-bar-right">
+            <ul class="rr-bar-container">
+              <li class="li-bar">
+                <p>5</p>
+                <div class="rating-review-bar bar-rating-5">
+                  <div class="child-bar-line"></div>
+                </div>
+              </li>
+              <li class="li-bar">
+                <p>4</p>
+                <div class="rating-review-bar bar-rating-4">
+                  <div class="child-bar-line"></div>
+                </div>
+              </li>
+              <li class="li-bar">
+                <p>3</p>
+                <div class="rating-review-bar bar-rating-3">
+                  <div class="child-bar-line"></div>
+                </div>
+              </li>
+              <li class="li-bar">
+                <p>2</p>
+                <div class="rating-review-bar bar-rating-2">
+                  <div class="child-bar-line"></div>
+                </div>
+              </li>
+              <li class="li-bar">
+                <p>1</p>
+                <div class="rating-review-bar bar-rating-1">
+                  <div class="child-bar-line"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="user-feedback"></ul>
+        <div class="review-back-btn">
+          <img src="icons/return.svg" alt="" />
+        </div>
+      </div>
+      <!-- My ACCOUNT PAGE -->
+      <div class="my-account-container">
+        <div class="account-back-btn">
+          <img src="icons/return.svg" alt="" />
+        </div>
+        <div class="app-header">
+          <img class="svg" src="images/app-logo.png" alt="" />
+          <h2 style="color: #ffffff">My Account</h2>
+        </div>
+        <div class="account-container-body">
+          <div class="edit-box">
+            <div class="input-container">
+              <div class="form">
+                <div class="profile-container">
+                  <div class="current-profile-conteiner">
+                    <div class="imgs">
+                      <img src="images/profiles/profile-0.png" alt="" />
+                    </div>
+                    <h3 class="username-display"></h3>
+                  </div>
+                  <div class="profile-options">
+                    <ul class="profile-list">
+                      <li>
+                        <img src="images/profiles/profile-0.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-3.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-4.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-5.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-8.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-9.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-7.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-1.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-6.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="images/profiles/profile-2.png" alt="" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="input-box">
+                  <img src="icons/user.svg" alt="" />
+                  <input
+                    value="Ganesh"
+                    type="text"
+                    autofocus
+                    autocomplete="off"
+                    name="username"
+                    id="username"
+                  />
+                </div>
+                <div class="aBtns">
+                  <button class="cancel-btn">Discard</button>
+                  <button class="update-profile">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="currency-container">
+            <div class="currency-body">
+              <h2>
+                <p></p>
+                <p class="dot-2"></p>
+                <p class="dot-3"></p>
+                Currency Sign
+              </h2>
+              <ul class="currency-options"></ul>
+              <div class="bottom-part">
+                <button class="close-currency">CANCEL</button>
+              </div>
+            </div>
+          </div>
+          <div class="chart-type-container">
+            <ul class="chart-body">
+              <li class="toggle-switch-parent" data-chart-name="pie">
+                <div class="chart-details">
+                  <p>Pie Chart</p>
+                  <small>Display data as segments</small>
+                </div>
+                <div class="toggle-switch">
+                  <div class="toggle-circle"></div>
+                </div>
+              </li>
+              <li class="toggle-switch-parent" data-chart-name="polarArea">
+                <div class="chart-details">
+                  <p>Polar Chart</p>
+                  <small>Visualizes data in a radial layout</small>
+                </div>
+                <div class="toggle-switch">
+                  <div class="toggle-circle"></div>
+                </div>
+              </li>
+              <li class="toggle-switch-parent" data-chart-name="doughnut">
+                <div class="chart-details">
+                  <div class="chart-details">
+                    <p>Doughnut Chart</p>
+                    <small>Pie chart with a center void</small>
+                  </div>
+                </div>
+                <div class="toggle-switch">
+                  <div class="toggle-circle"></div>
+                </div>
+              </li>
+              <li class="closeChartOptions">
+                <button class="close-chart-container">Close</button>
+              </li>
+            </ul>
+          </div>
+          <div class="privacy-container">
+            <header>
+              <h2>Privacy Policy</h2>
+              <p>
+                Effective Date: <strong>1<sup>st </sup> Jan 2025</strong>
+              </p>
+            </header>
+            <section>
+              <h4>Introduction</h4>
+              <p>
+                At <strong>Penny Partner</strong>, we prioritize your privacy.
+                This Privacy Policy explains how we collect, use, and safeguard
+                your data when using our financial management web application.
+                By using the app, you agree to the practices outlined below.
+              </p>
+            </section>
+            <section>
+              <h4>1. Information We Collect</h4>
+              <p>We collect the following types of information:</p>
+              <ul>
+                <li>
+                  <strong>Personal Information</strong>: When you create an
+                  account, we collect your name, email address, and password to
+                  ensure secure access.
+                </li>
+                <li>
+                  <strong>Transaction Data</strong>: We collect data about your
+                  income, expenses, budgets, accounts, and categories to help
+                  you manage and analyze your finances.
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4>2. How We Use Your Information</h4>
+              <p>
+                Your information is used to provide and enhance our services:
+              </p>
+              <ul>
+                <li>
+                  <strong>Account Authentication</strong>: We verify your
+                  identity to ensure secure login and protect your account.
+                </li>
+                <li>
+                  <strong>Financial Management</strong>: We store your
+                  transaction data to help you track your finances, set budgets,
+                  and generate reports.
+                </li>
+                <li>
+                  <strong>Security</strong>: We encrypt your password to keep
+                  your account secure. If you change your password, you will be
+                  logged out of all other devices to protect your information.
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4>3. Data Security</h4>
+              <p>Your security is our priority:</p>
+              <ul>
+                <li>
+                  <strong>Password Encryption</strong>: We encrypt your password
+                  for secure authentication, ensuring only you can access your
+                  account.
+                </li>
+                <li>
+                  <strong>Transaction Data</strong>: Your transaction data is
+                  stored securely in its original form to maintain performance
+                  while ensuring confidentiality.
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4>4. Data Retention</h4>
+              <p>
+                We retain your data only as long as necessary to provide our
+                services or as required by law. You can delete your account at
+                any time, and we will remove your data from our servers upon
+                request.
+              </p>
+            </section>
+            <section>
+              <h4>5. Your Rights</h4>
+              <p>You have the right to:</p>
+              <ul>
+                <li>
+                  <strong>Access and Manage</strong>: View and update your
+                  personal and transaction information at any time.
+                </li>
+                <li>
+                  <strong>Delete</strong>: Request the deletion of your account
+                  and all associated data.
+                </li>
+                <li>
+                  <strong>Withdraw Consent</strong>: You may withdraw your
+                  consent to data processing at any time by contacting us.
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4>6. Changes to This Privacy Policy</h4>
+              <p>
+                We may update this Privacy Policy as needed. Significant changes
+                will be communicated to you through the app or on our website.
+                Continued use of the app after updates indicates acceptance of
+                the changes.
+              </p>
+            </section>
+            <section>
+              <h4>7. Contact Us</h4>
+              <p>
+                If you have any questions about this Privacy Policy, feel free
+                to contact us:
+              </p>
+              <ul>
+                <li>
+                  <strong>Email</strong>:
+                  <a href="mailto:official.devpro@gmail.com"
+                    >official.devpro@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section>
+              <i>
+                <q
+                  >Your financial success is our mission; your privacy is our
+                  promise.</q
+                >
+              </i>
+            </section>
+          </div>
+          <div class="settings">
+            <ul>
+              <li class="edit-username">
+                <div class="left-part">
+                  <img class="svg" src="icons/edit.svg" alt="Edit Icon" />
+                  <div class="info">
+                    <p>Username</p>
+                    <small>Tap to edit your username</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li class="currency-open">
+                <div class="left-part">
+                  <img
+                    class="svg"
+                    src="icons/currency.svg"
+                    alt="Currency Icon"
+                  />
+                  <div class="info">
+                    <p>Currency Format</p>
+                    <small>Set Your Preferred Currency</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li class="chart-label">
+                <div class="left-part">
+                  <img class="svg" src="icons/chart.svg" alt="Currency Icon" />
+                  <div class="info">
+                    <p>Customize Chart</p>
+                    <small>Pick your chart style</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li id="export-label">
+                <div class="left-part">
+                  <img class="svg" src="icons/xls.svg" alt="Export Icon" />
+                  <div class="info download-link">
+                    <p>Export Records</p>
+                    <small>Download records as a XLSX file</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li id="reset-app">
+                <div class="left-part">
+                  <img class="svg" src="icons/reset.svg" alt="Reset Icon" />
+                  <div class="info">
+                    <p>Reset App</p>
+                    <small>Restore app to its initial state</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <style>
+                #contact-us a {
+                  color: inherit;
+                  text-decoration: none;
+                }
+                .settings ul li:hover {
+                  background-color: rgb(244, 244, 244);
+                  transition: all 0s ease;
+                }
+                .app.dark .settings ul li:hover {
+                  background-color: rgb(36, 36, 36);
+                }
+              </style>
+              <li id="contact-us">
+                <a href="mailto:official.devpro@gmail.com">
+                  <div class="left-part">
+                    <img
+                      class="svg"
+                      src="icons/message.svg"
+                      alt="Contact Icon"
+                    />
+                    <div class="info">
+                      <p>Contact Support</p>
+                      <small>Get in touch or send a message</small>
+                    </div>
+                  </div></a
+                >
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li id="privacy-btn">
+                <div class="left-part">
+                  <img class="svg" src="icons/privacy.svg" alt="Privacy Icon" />
+                  <div class="info">
+                    <p>Privacy Policy</p>
+                    <small>Review our privacy practices</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li id="logout">
+                <div class="left-part">
+                  <img class="svg" src="icons/logout.svg" alt="Logout Icon" />
+                  <div class="info">
+                    <p>Logout</p>
+                    <small>Double-tap to securely sign out.</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+              <li id="delete">
+                <div class="left-part">
+                  <img class="svg" src="icons/delete.svg" alt="Delete Icon" />
+                  <div class="info">
+                    <p>Delete Account</p>
+                    <small>Permanently remove your account</small>
+                  </div>
+                </div>
+                <img
+                  class="arrow-right"
+                  src="icons/arrowright.svg"
+                  alt="Right Arrow Icon"
+                />
+              </li>
+            </ul>
+            <style></style>
+            <div class="message-box-main">
+              <div class="message-body">
+                <div class="msg-content">
+                  <b>Caution</b>
+                  <p>
+                    Everything will be delete and app will go to initial state.
+                    Are you sure?
+                  </p>
+                  <div class="caution-conformation">
+                    <button class="close-msg-box">Dismiss</button>
+                    <button class="confirm-reset-app">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="export-box">
+              <div class="export-box-body">
+                <div class="msg-content">
+                  <b>Select Month</b>
+                  <div class="export-month-body">
+                    <div class="export-left-space"></div>
+                    <div class="export-right-space"></div>
+                    <div class="export-left-arrow"></div>
+                    <h3 class="export-month"></h3>
+                    <div class="export-right-arrow"></div>
+                  </div>
+                  <div class="export-btn">
+                    <button>EXPORT NOW</button>
+                  </div>
+                </div>
+                <div class="up-arrow">
+                  <img
+                    style="transform: rotate(90deg)"
+                    src="./icons/arrorLeft.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="JavaScript/userInfo.js"></script>
+    <script type="module" src="JavaScript/home.js"></script>
+    <script type="module" src="./service-worker.js"></script>
+    <script async type="module" src="JavaScript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="JavaScript/analysis.js"></script>
+    <script defer type="module" src="JavaScript/functions.js"></script>
+    <script defer type="module" src="JavaScript/category.js"></script>
+    <script defer type="module" src="JavaScript/budget.js"></script>
+    <script type="module" src="JavaScript/review.js"></script>
+    <script src="JavaScript/animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  </body>
+</html>

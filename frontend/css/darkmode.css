@@ -1,0 +1,363 @@
+:root {
+  --blur: rgb(160, 160, 160);
+  --darkblur: rgb(255, 0, 0);
+  --dark: #ff0000;
+  --lightDark: rgb(53, 53, 53);
+}
+
+.app.dark,
+.app.dark .sidebar {
+  background-color: var(--dark);
+  color: #ffffff;
+}
+
+.app.dark img.svg {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+.app.dark main section.home .home-container .input-containers,
+.app.dark main section.account .box-body,
+.app.dark main section.categories .category-box-body,
+.app.dark main section.categories .edit-category-box-body,
+.app.dark main section.budgets .budget-input-container,
+.app.dark main section.budgets .budget-edit-container,
+.app.dark main section.account .edit-box-body {
+  background-color: var(--dark);
+  color: #ffffff;
+}
+.app.dark main section.account .box-body .input-container .input-body input,
+.app.dark
+  main
+  section.categories
+  .category-box-body
+  .input-container
+  .input-body
+  input,
+.app.dark
+  main
+  section.categories
+  .edit-category-box-body
+  .input-container
+  .input-body
+  input,
+.app.dark
+  main
+  section.budgets
+  .budget-input-container
+  .form-container
+  .input-body
+  input,
+.app.dark
+  main
+  section.budgets
+  .budget-edit-container
+  .form-container
+  .input-body
+  input,
+.app.dark
+  main
+  section.account
+  .edit-box-body
+  .input-container
+  .input-body
+  input {
+  background-color: var(--dark);
+  color: #ffffff;
+}
+.app.dark main section.account .account-container ul li .operations .options,
+.app.dark
+  main
+  section.categories
+  .category-container
+  .income-category
+  ul
+  li
+  .right-portion
+  .options,
+.app.dark .category-options,
+.app.dark
+  main
+  section.categories
+  .category-container
+  .expense-category
+  ul
+  li
+  .right-portion
+  .options {
+  background-color: var(--lightDark);
+  color: #ffffff;
+}
+.app.dark
+  main
+  section.account
+  .account-container
+  ul
+  li
+  .operations
+  .options
+  p:hover,
+.app.dark
+  main
+  section.categories
+  .category-container
+  .income-category
+  ul
+  li
+  .right-portion
+  .options
+  p:hover,
+.app.dark .category-options p:hover,
+.app.dark
+  main
+  section.categories
+  .category-container
+  .expense-category
+  ul
+  li
+  .right-portion
+  .options
+  p:hover {
+  background-color: rgb(80, 80, 80) !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar .settings ul li:hover {
+    background-color: rgb(53, 53, 53);
+  }
+}
+/* .app.dark main section.account.blurbg, */
+.app.dark main section.categories.blur,
+.app.dark main section.categories.blurbg
+/* .app.dark main section.budgets .budget-container.blur, */ {
+  background-color: rgb(38, 37, 37);
+  color: #050505;
+  transition: background-color color 1s ease;
+  -webkit-transition: background-color color 1s ease;
+  -moz-transition: background-color color 1s ease;
+  -ms-transition: background-color color 1s ease;
+  -o-transition: background-color color 1s ease;
+}
+.app.dark footer {
+  background-color: var(--dark);
+}
+
+.app.dark main section.account.blur .card,
+.app.dark main section.account.blur .penny-info,
+.app.dark main section.account.blurbg .penny-info,
+.app.dark
+  main
+  section.budgets
+  .budget-container.blur
+  .set-budgeted-list
+  li
+  .bar-container,
+.app.dark main section.account.blurbg .card {
+  transition: all 0s ease;
+  -webkit-transition: all 0s ease;
+  -moz-transition: all 0s ease;
+  -ms-transition: all 0s ease;
+  -o-transition: all 0s ease;
+}
+.app.dark main section.budgets .budget-input-container::after,
+.app.dark main section.budgets .budget-edit-container::after {
+  background-color: rgb(0, 0, 0);
+  border: none;
+}
+
+.app.dark main section.budgets .right-portion .budget-operations {
+  background-color: var(--lightDark);
+  color: #ffffff;
+}
+.app.dark main section.budgets .right-portion .budget-operations p:hover {
+  background-color: rgb(80, 80, 80) !important;
+}
+
+.app.dark .sidebar .settings ul li .arrow-right {
+  opacity: 0.4;
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+.app.dark .pp-users-container #user-count-body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.app.dark .pp-users-container #user-count {
+  color: #000000 !important;
+}
+.app.dark .pp-users-container {
+  background-color: #161616e2;
+}
+.app.dark .rr-container,
+.app.dark .rr-container header,
+.app.dark .rr-container .review-input-container {
+  background-color: var(--dark);
+}
+
+.app.dark .star-shadow {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+.app.dark .arrow-right {
+  filter: invert(0.8);
+  -webkit-filter: invert(0.8);
+}
+.app.dark .imgSvg {
+  filter: invert(1) !important;
+  -webkit-filter: invert(1) !important;
+}
+
+/*  --------SKELETON LOADING EFFECT FOR CATEGORY PAGE------------- */
+
+.app.dark
+  .category-container
+  .expense-category-skeleton
+  ul
+  li
+  .left-portion-skeleton
+  p,
+.app.dark
+  .category-container
+  .expense-category-skeleton
+  ul
+  li
+  .left-portion-skeleton
+  .img,
+.app.app.dark
+  .category-container
+  .income-category-skeleton
+  ul
+  li
+  .left-portion-skeleton
+  .img,
+.app.dark
+  .category-container
+  .expense-category-skeleton
+  ul
+  li
+  .right-portion-skeleton
+  .img,
+.app.dark
+  .category-container
+  .income-category-skeleton
+  ul
+  li
+  .right-portion-skeleton
+  .img,
+.app.dark .category-container .income-category-skeleton h3,
+.app.dark .category-container .expense-category-skeleton h3,
+.app.dark
+  .category-container
+  .income-category-skeleton
+  ul
+  li
+  .left-portion-skeleton
+  p {
+  background: linear-gradient(90deg, #1a1a1a 25%, #222222 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 2s ease-in-out infinite;
+  border-radius: 5px;
+  -webkit-animation: skeleton-loading 2s ease-in-out infinite;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* -------------SKELETON LOADING EFFECT FOR ACCOUNT PAGE-------------------- */
+.app.dark .skeleton-penny-info,
+.app.dark .skeleton-card,
+.app.dark .skeleton-title {
+  background: linear-gradient(90deg, #1a1a1a 25%, #222222 50%, #1a1a1a 75%);
+  -webkit-border-radius: 5px;
+  animation: skeleton-loading 2s ease-in-out infinite;
+  background-size: 200% 100%;
+  border-radius: 5px;
+  -webkit-animation: skeleton-loading 2s ease-in-out infinite;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.app.dark .account-container .accounts .card {
+  padding: 10px 15px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.app.dark .transfer-arrow {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+.app.dark .sidebar header::before {
+  background: linear-gradient(to right, #000000, #2ac5cd);
+}
+.app.dark .cloud-2,
+.app.dark .cloud-3,
+.app.dark .cloud,
+.app.dark .sun-theme {
+  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+}
+.app.dark .sidebar header img.user-profile {
+  background-color: #c1c1c1;
+}
+/* .sidebar.active .sun-theme {
+  animation: rise 0.3s ease;
+  -webkit-animation: rise 0.3s ease;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+  }
+} */
+
+.app.dark .currency-body h2,
+.app.dark .currency-body {
+  background-color: var(--dark);
+}
+.app.dark .currency-container {
+  background-color: var(--dark);
+}
+
+.app.dark .account-container-body .edit-box .input-container {
+  background-color: rgb(36 36 36);
+}
+
+.app.dark .export-box {
+  background-color: #000000;
+}
+.app.dark .chart-type-container,
+.app.dark .chart-body {
+  background-color: #000000;
+}
+.app.dark .privacy-container {
+  background-color: #000000;
+}
+.app.dark .message-box-main {
+  background-color: #000000;
+}
+.app.dark .message-body .msg-content {
+  color: #ffffff;
+  background: linear-gradient(to bottom left, rgb(0 150 126), rgb(0 0 0));
+}
+.app.dark .rr-options {
+  background-color: #424242;
+
+  color: #ffffff;
+}
+.app.dark .rr-options p:hover {
+  background-color: #242424;
+}
+
+.app.dark .rating-review-bar{
+  background-color:#333333;
+}
+.app.dark .rating-review-bar .child-bar-line{
+  background-color:#00f2fe;
+}

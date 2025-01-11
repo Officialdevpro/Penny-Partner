@@ -1,0 +1,614 @@
+.rr-container {
+  display: none;
+  justify-content: start;
+  background-color: #ffffff;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  flex-direction: column;
+  scrollbar-width: none;
+  gap: 25px;
+  padding-bottom: 50px;
+}
+
+.rr-container.active {
+  display: flex;
+  opacity: 0;
+  animation: showReviews 0.3s ease-in-out;
+
+  animation-fill-mode: forwards;
+}
+@keyframes showReviews {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rr-container header {
+  width: 100%;
+}
+.rr-container header p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.rr-body {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+.rr-body .rating-num-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.review-operations {
+  position: relative;
+}
+
+.rr-options.active {
+  display: flex;
+  flex-direction: column;
+}
+.rr-options {
+  animation: downrr 0.3s ease;
+  position: absolute;
+  display: none;
+  left: -100px;
+  top: 0px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 5px 5px px #87868633;
+  -webkit-animation: downrr 0.3s ease;
+}
+
+@keyframes downrr {
+  0% {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+  }
+}
+.rr-body .rating-num-left h1 {
+  font-size: 50px;
+}
+.user-feedback .review-card .review-left-part p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.user-feedback .review-card .review-left-part p {
+  font-size: 18px;
+  font-weight: 500;
+}
+ul {
+  list-style: none;
+}
+.rating-review-bar {
+  width: 80%;
+  height: 10px;
+  position: relative;
+  background-color: rgb(217, 217, 217);
+  border-radius: 5px;
+}
+.rating-review-bar .child-bar-line {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgb(72, 128, 238);
+  border-radius: 5px;
+}
+
+li.li-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.rr-body .rating-bar-right {
+  width: 100%;
+  padding-right: 20px;
+}
+.rr-bar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 123, 0);
+  border-radius: 50%;
+}
+.review-dot {
+  transform: rotate(90deg);
+}
+.review-left-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card {
+  width: 100%;
+  gap: 15px;
+  display: flex;
+  padding: 0px 5px;
+  flex-direction: column;
+}
+.review-card-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-text {
+  text-align: justify;
+  padding-right: 5px;
+}
+.user-feedback {
+  padding: 0px 10px;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.review-card-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.review-card-center .reviewed-star {
+  display: flex;
+  gap: 3px;
+}
+.review-card-center img {
+  width: 15px;
+  height: 15px;
+}
+.rr-container header .left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+.rr-container header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+  width: 100vw;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.review-input-container {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.review-input-container.active {
+  display: flex;
+}
+.review-input-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 30px;
+}
+.review-input-body textarea:focus {
+  outline: none;
+}
+.review-input-body textarea {
+  min-width: 90%;
+  max-width: 90%;
+  scrollbar-width: none;
+  min-height: 50px;
+  max-height: 50px;
+  resize: none;
+  border: 1px solid;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: topcome 0.3s ease;
+}
+.review-input-body .rating-star-container {
+  gap: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-input-body .rating-star-container .star {
+  width: 50px;
+  height: 50px;
+  background-color: #7d7d7d;
+  animation: rightcome 0.3s ease;
+  position: relative;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+.review-input-body .rating-star-container .star::before {
+  position: absolute;
+  content: " ";
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+.review-input-body .rating-star-container .star.active::before {
+  background-color: rgb(255, 174, 0);
+}
+.review-input-body .rating-star-container .star.active {
+  background-color: rgb(255, 174, 0);
+  animation: star 0.3s ease;
+}
+@keyframes star {
+  0% {
+    transform: scale(0);
+  }
+}
+.review-input-body .rating-star-container .star:hover {
+  background-color: rgb(255, 174, 0);
+}
+.word-count-body {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25px;
+}
+.review-write {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.review-post-body {
+  width: 0%;
+  height: 45px;
+  animation: bottomcome 0.3s ease;
+  animation-fill-mode: forwards;
+}
+.review-post-body button {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(53, 226, 111);
+}
+.review-post-body button:disabled {
+  background-color: rgb(109, 227, 148);
+}
+
+.review-post-body button:focus {
+  outline: none;
+}
+.review-post-body button:active {
+  transform: scale(0.98);
+}
+.app-logo-review {
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-logo-review .app-logo {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  animation: zoom 0.5s ease 0.3s;
+  border-radius: 50%;
+
+  animation-fill-mode: forwards;
+}
+@keyframes leftcome {
+  0% {
+    transform: translateX(100px);
+  }
+}
+@keyframes rightcome {
+  0% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes bottomcome {
+  0% {
+    width: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    width: 90%;
+  }
+}
+@keyframes topcome {
+  0% {
+    transform: translateY(100px);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.app-logo-review p {
+  font-size: 20px;
+  font-weight: 600;
+  animation: leftcome 0.3s ease;
+}
+.app-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.rr-container header .left img {
+  width: 30px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-back-btn,
+.account-back-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 1;
+}
+.review-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* privacy content */
+.privacy-container.active {
+  display: block;
+}
+.privacy-container {
+  width: 100%;
+  display: none;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 10px 15px;
+  text-align: justify;
+  padding-bottom: 40px;
+  animation: openup .3s ease forwards;
+  -webkit-animation: openup .3s ease forwards;
+}
+.privacy-container section {
+  margin-top: 20px;
+}
+.privacy-container section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.privacy-container section i {
+  text-align: center;
+}
+.privacy-container h4{
+  color: #018c8c;
+}
+.app.dark .privacy-container h4{
+  color: aqua;
+}
+i q {
+  font-family: cursive;
+
+  background: linear-gradient(
+    to bottom left,
+    rgb(0, 255, 213),
+    rgb(230, 0, 255)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.privacy-container section ul li {
+  list-style: disc;
+  margin-left: 15px;
+}
+
+
+/* Message box for reset app */
+.message-box-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.message-box-main .message-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+}
+.message-body .msg-content {
+  width: 320px !important;
+  background: linear-gradient(to bottom left, rgb(0 150 126), rgb(0 0 0));
+  color: #ffffff;
+  padding: 10px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 5px;
+  animation: caution 0.3s ease-out;
+}
+.message-body .msg-content .caution-conformation {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.message-body .msg-content .caution-conformation button {
+  width: 200px;
+  height: 40px;
+  font-weight: 600;
+}
+@keyframes caution {
+  0% {
+    transform: scale(0.5);
+  }
+}
+.message-box-main.active {
+  display: flex;
+}
+
+.write-pen.hide{
+  display: none;
+}
+.review-operations .options{
+  display: none;
+}
+
+.review-operations .options.active{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 30px;
+}
+
+.review-input-container.active +header+div+ul{
+  background-color: red !important;
+  display: none !important;
+} 
+
+.month-body,.head-content{
+  position: relative;
+ 
+}
+/* styling for header in home page */
+.header-left-space{
+  position: absolute;
+  top: -5px;
+    left: -54px;
+
+    width: 100px;
+    height: 37px;
+z-index: 2;
+}
+.header-left-space,.header-right-space{
+  position: absolute;
+  top: -5px;
+    right: -54px;
+ 
+    width: 100px;
+    height: 37px;
+z-index: 1;
+}
+.head-content{
+  position: relative;
+ z-index: 1;
+}
+.head-content .header-right-space{
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  width: 100px;
+  height: 37px;
+  z-index: 1;
+
+}
+.head-content .header-left-space{
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  width: 100px;
+  height: 37px;
+  z-index: 1;
+
+}
+.analysis-container .month-body{
+  margin-top: 15px;
+}
+.month-info{
+  margin-top: 5px;
+}
