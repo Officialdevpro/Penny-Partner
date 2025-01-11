@@ -48,7 +48,9 @@ let previousFromAccount;
 let previousToAccount;
 let previousType;
 async function getAccountsAndCategories() {
-  let req = await fetch(`http://localhost:4000/api/v1/users//data`);
+  let req = await fetch(
+    `https://penny-partner.onrender.com/api/v1/users//data`
+  );
   let res = await req.json();
 
   if (res.status === "success") {
@@ -946,7 +948,7 @@ export async function loadData(month) {
 
   try {
     let req = await fetch(
-      `http://localhost:4000/api/v1/users//transactions/?month=${month}`
+      `https://penny-partner.onrender.com/api/v1/users//transactions/?month=${month}`
     );
     let res = await req.json();
     if (res.status === "success") {
@@ -996,7 +998,7 @@ async function updateRecordToDb(transactionId, data) {
 
   try {
     let response = await fetch(
-      ` http://localhost:4000/api/v1/users//transactions/${transactionId}`,
+      ` https://penny-partner.onrender.com/api/v1/users//transactions/${transactionId}`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
@@ -1029,7 +1031,7 @@ async function updateRecordToDb(transactionId, data) {
 async function deleteRecordToDb(transactionId) {
   try {
     let response = await fetch(
-      ` http://localhost:4000/api/v1/users//transactions/${transactionId}`,
+      ` https://penny-partner.onrender.com/api/v1/users//transactions/${transactionId}`,
       {
         method: "DELETE",
       }
@@ -1056,7 +1058,7 @@ async function deleteRecordToDb(transactionId) {
 async function saveRecordToDb(data) {
   try {
     let response = await fetch(
-      ` http://localhost:4000/api/v1/users//transactions`,
+      ` https://penny-partner.onrender.com/api/v1/users//transactions`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1453,7 +1455,7 @@ function dynamicChange(data) {
 async function updateBudgetDb(catId, data) {
   let userId = "66efd1552e03ec45ce74d5fd";
   let req = await fetch(
-    ` http://localhost:4000/api/v1/users//budgets/some/${userId}/?categoryId=${catId}`,
+    ` https://penny-partner.onrender.com/api/v1/users//budgets/some/${userId}/?categoryId=${catId}`,
     {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },

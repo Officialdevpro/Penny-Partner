@@ -258,7 +258,9 @@ document.addEventListener("click", (e) => {
 });
 
 async function loadData() {
-  let req = await fetch(` http://localhost:4000/api/v1/users/categories`);
+  let req = await fetch(
+    ` https://penny-partner.onrender.com/api/v1/users/categories`
+  );
   let res = await req.json();
 
   if (res.status == "success") {
@@ -299,18 +301,21 @@ function showCategory() {
 
 // -----------------CREATE CATEGORY TO DB ----------------------------
 async function saveCategoryDb(data) {
-  let req = await fetch(` http://localhost:4000/api/v1/users/categories`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  let req = await fetch(
+    ` https://penny-partner.onrender.com/api/v1/users/categories`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }
+  );
   let res = await req.json();
 }
 
 // -----------------UPDATE CATEGORY TO DB ----------------------------
 async function updateCategoryDb(data, categoryId) {
   let req = await fetch(
-    ` http://localhost:4000/api/v1/users/categories/${categoryId}`,
+    ` https://penny-partner.onrender.com/api/v1/users/categories/${categoryId}`,
     {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -322,7 +327,7 @@ async function updateCategoryDb(data, categoryId) {
 // -----------------DELETE CATEGORY TO DB ----------------------------
 async function deleteCategoryDb(userId, categoryId) {
   let req = await fetch(
-    ` http://localhost:4000/api/v1/users/categories/${categoryId}?userId=${userId}`,
+    ` https://penny-partner.onrender.com/api/v1/users/categories/${categoryId}?userId=${userId}`,
     {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },

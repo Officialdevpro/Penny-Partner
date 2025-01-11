@@ -8,7 +8,7 @@ let closeCurrency = document.querySelector(".close-currency");
 let selectedCurrency;
 let activateChart = document.querySelectorAll(".toggle-switch");
 async function profileSetup() {
-  let req = await fetch("http://localhost:4000/api/v1/users");
+  let req = await fetch("https://penny-partner.onrender.com/api/v1/users");
   let res = await req.json();
   if (res.status == "success") {
     let { data } = res;
@@ -70,11 +70,14 @@ function filterObj(obj) {
 }
 async function updateMe(obj) {
   let data = filterObj(obj);
-  let req = await fetch(` http://localhost:4000/api/v1/users/updateMe`, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  let req = await fetch(
+    ` https://penny-partner.onrender.com/api/v1/users/updateMe`,
+    {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }
+  );
   let res = await req.json();
   if (req.status === 200) {
     let month = document.querySelectorAll(".month-body .month")[1].textContent;
@@ -150,7 +153,9 @@ closeCurrency.addEventListener("click", () => {
 });
 const logoutBtn = document.getElementById("logout");
 logoutBtn.addEventListener("dblclick", async () => {
-  let req = await fetch(" http://localhost:4000/api/v1/users/logout");
+  let req = await fetch(
+    " https://penny-partner.onrender.com/api/v1/users/logout"
+  );
   let res = await req.json();
   if (res.status == "success") {
     window.location.reload();
@@ -158,9 +163,12 @@ logoutBtn.addEventListener("dblclick", async () => {
 });
 const delBtn = document.getElementById("delete");
 delBtn.addEventListener("dblclick", async () => {
-  let req = await fetch(" http://localhost:4000/api/v1/users/deleteMe", {
-    method: "DELETE",
-  });
+  let req = await fetch(
+    " https://penny-partner.onrender.com/api/v1/users/deleteMe",
+    {
+      method: "DELETE",
+    }
+  );
   if (req.status == 204) {
     location.reload(true);
   }
@@ -270,7 +278,7 @@ exportBtn.addEventListener("click", async (e) => {
   try {
     e.preventDefault();
     let req = await fetch(
-      ` http://localhost:4000/api/v1/users/report?month=${requestedMonth}`,
+      ` https://penny-partner.onrender.com/api/v1/users/report?month=${requestedMonth}`,
       {
         method: "GET",
         headers: {
@@ -300,7 +308,9 @@ let confirmResetBtn = document.querySelector(".confirm-reset-app");
 confirmResetBtn.addEventListener("click", resetApp);
 async function resetApp() {
   confirmResetBtn.innerHTML = "<div class='spin'></div>";
-  let req = await fetch(" http://localhost:4000/api/v1/users/resetApp");
+  let req = await fetch(
+    " https://penny-partner.onrender.com/api/v1/users/resetApp"
+  );
   let res = await req.json();
   if (res.status == "success") {
     window.location.reload(true);

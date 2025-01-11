@@ -1,5 +1,7 @@
 async function countUsers() {
-  let req = await fetch(" http://localhost:4000/api/v1/users/count");
+  let req = await fetch(
+    " https://penny-partner.onrender.com/api/v1/users/count"
+  );
   let res = await req.json();
   if (res.status == "success") {
     return res.userCount;

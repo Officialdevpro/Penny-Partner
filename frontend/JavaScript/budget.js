@@ -330,7 +330,7 @@ document.addEventListener("click", (e) => {
 //-------------READ BUDGETS -----------------------
 export default async function loadDataBudgets(month) {
   let req = await fetch(
-    ` http://localhost:4000/api/v1/users/budgets?month=${month}`
+    ` https://penny-partner.onrender.com/api/v1/users/budgets?month=${month}`
   );
   let res = await req.json();
 
@@ -382,11 +382,14 @@ async function createBudgetDb(data) {
   });
   data.month = formattedMonth;
   try {
-    let req = await fetch(`http://localhost:4000/api/v1/users/budgets`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    let req = await fetch(
+      `https://penny-partner.onrender.com/api/v1/users/budgets`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
     let res = await req.json();
 
     if (req.status == 201) {
@@ -405,7 +408,7 @@ async function createBudgetDb(data) {
 //--------------------REMOVE BUDGETS---------------------
 async function removeBudgetDb(budgetId, callBack) {
   let req = await fetch(
-    `http://localhost:4000/api/v1/users/budgets/${budgetId}`,
+    `https://penny-partner.onrender.com/api/v1/users/budgets/${budgetId}`,
     {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
@@ -421,7 +424,7 @@ async function removeBudgetDb(budgetId, callBack) {
 //--------------------UPDATE BUDGETS---------------------
 async function updateBudgetDb(budgetId, data) {
   let req = await fetch(
-    `http://localhost:4000/api/v1/users/budgets/${budgetId}`,
+    `https://penny-partner.onrender.com/api/v1/users/budgets/${budgetId}`,
     {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -438,7 +441,7 @@ async function updateBudgetDb(budgetId, data) {
 let month = document.querySelectorAll(".month-body .month")[1].textContent;
 async function loadBudgeted(month) {
   let req = await fetch(
-    `http://localhost:4000/api/v1/users/budgets?month=${month}`
+    `https://penny-partner.onrender.com/api/v1/users/budgets?month=${month}`
   );
   let res = await req.json();
   if (req.status == 200) {

@@ -10,7 +10,7 @@ export default async function visualizeData(
   month = formattedDate
 ) {
   let req = await fetch(
-    `http://localhost:4000/api/v1/analytics?type=${type}&month=${month}`
+    `https://penny-partner.onrender.com/api/v1/analytics?type=${type}&month=${month}`
   );
   let res = await req.json();
   let chart = document.querySelector(".chart");

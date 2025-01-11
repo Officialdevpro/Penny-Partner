@@ -52,7 +52,7 @@ let userReview = "";
 async function loadReviews() {
   let userId = document.querySelector(".home-display-username").dataset;
 
-  let req = await fetch(" http://localhost:4000/api/v1/reviews");
+  let req = await fetch(" https://penny-partner.onrender.com/api/v1/reviews");
   let res = await req.json();
   if (req.status === 200) {
     let { stats, reviews } = res;
@@ -261,7 +261,7 @@ postBtn.addEventListener("click", async () => {
     updateReviewFromServer(reviewId, reviewObj);
     return;
   }
-  let req = await fetch(" http://localhost:4000/api/v1/reviews", {
+  let req = await fetch(" https://penny-partner.onrender.com/api/v1/reviews", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(reviewObj),
@@ -314,7 +314,7 @@ function dynamictemplate(reviewObj) {
 async function deleteReviewFromServer(reviewId) {
   try {
     let response = await fetch(
-      ` http://localhost:4000/api/v1/reviews/${reviewId}`,
+      ` https://penny-partner.onrender.com/api/v1/reviews/${reviewId}`,
       {
         method: "DELETE",
       }
@@ -329,7 +329,7 @@ document.querySelector(".account-back-btn").addEventListener("click", () => {
 async function updateReviewFromServer(reviewId, data) {
   try {
     let response = await fetch(
-      ` http://localhost:4000/api/v1/reviews/${reviewId}`,
+      ` https://penny-partner.onrender.com/api/v1/reviews/${reviewId}`,
       {
         method: "PATCH",
         headers: {

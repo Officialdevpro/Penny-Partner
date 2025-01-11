@@ -219,7 +219,7 @@ document.addEventListener("touchend", (e) => {
 });
 export async function loadAccountsData() {
   const req = await fetch(
-    " http://localhost:4000/api/v1/users/accounts/balance/"
+    " https://penny-partner.onrender.com/api/v1/users/accounts/balance/"
   );
   const res = await req.json();
   if (req.status === 200) {
@@ -296,7 +296,7 @@ export function resetInputContainer() {
 }
 export async function loadHeaderInfo(month) {
   let req = await fetch(
-    `http://localhost:4000/api/v1/users/headerInfo?month=${month}`
+    `https://penny-partner.onrender.com/api/v1/users/headerInfo?month=${month}`
   );
   if (req.status == 200) {
     let { incomeTotal, expenseTotal, overAllTotal } = await req.json();
