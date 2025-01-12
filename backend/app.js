@@ -57,7 +57,7 @@ const otpLimiter = rateLimit({
     });
   },
 });
-app.use("/api", limiter);
+// app.use("/api", limiter);
 
 // CORS configuration
 app.use(
