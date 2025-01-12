@@ -29,10 +29,10 @@ let accountPageIn = document.querySelector(".account-page-income");
 let accountPageEx = document.querySelector(".account-page-expense");
 if (isDark) {
   document.querySelector(".app").classList.add("dark");
-  document.querySelector(".sun-theme").setAttribute("src", "moon.png");
+  document.querySelector(".sun-theme").setAttribute("src", "images/moon.png");
   sunMoon.setAttribute("src", "icons/moon.svg");
 } else {
-  document.querySelector(".sun-theme").setAttribute("src", "sun.png");
+  document.querySelector(".sun-theme").setAttribute("src", "images/sun.png");
 }
 let userCurrency = JSON.parse(localStorage.getItem("currency"));
 import {
