@@ -35,17 +35,17 @@ const TempUsers = require("./models/tempModel.js");
 // app.use(helmet());
 
 //Limit requests from same IP
-const limiter = rateLimit({
-  max: 50,
-  windowMs: 60 * 60 * 1000,
-  message: "Too many requests from this IP, please try again in an hour!",
-  handler: (req, res, next, options) => {
-    res.status(options.statusCode).json({
-      status: "fail",
-      message: options.message,
-    });
-  },
-});
+// const limiter = rateLimit({
+//   max: 50,
+//   windowMs: 60 * 60 * 1000,
+//   message: "Too many requests from this IP, please try again in an hour!",
+//   handler: (req, res, next, options) => {
+//     res.status(options.statusCode).json({
+//       status: "fail",
+//       message: options.message,
+//     });
+//   },
+// });
 const otpLimiter = rateLimit({
   max: 2,
   windowMs: 60 * 60 * 1000,
