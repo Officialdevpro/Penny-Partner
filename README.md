@@ -60,17 +60,17 @@ git clone https://github.com/Officialdevpro/penny-partner.git
 ```bash
 cd penny-partner
 ```
-<br></br>
+
 ### 2️⃣ Install Dependencies
 Ensure you have Node.js installed, then run the following command to install the required dependencies:
 ```bash
 npm install
 ```
-<br></br>
+
 ### 3️⃣ Set Up Environment Variables
 Create a .env file in the root directory and add the following variables which have already in the .env.example file.
  
-<br></br>
+
 ### 4️⃣ Start the Development Server
 Run the following command to start the server:
 
