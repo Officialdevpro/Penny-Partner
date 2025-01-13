@@ -108,7 +108,7 @@
       width: 100%;
       position: relative;
     }
-    form main section .form-group img {
+    form main section .form-group img.first {
       opacity: 0.6;
       position: absolute;
       top: 15px;
@@ -543,6 +543,12 @@
       width: 100%;
       text-align: justify !important;
     }
+    .toggle-password {
+      opacity: 0.6;
+      position: absolute;
+      top: 15px !important;
+      right: 20px !important;
+    }
   </style>
   <body>
     <div class="container">
@@ -581,16 +587,17 @@
               <button class="back-home">Go Back</button>
             </div>
             <div class="form-group">
-              <img src="icons/message.svg" alt="" />
+              <img src="/icons/message.svg" class="first" alt="" />
               <input id="email" type="text" placeholder="Enter your email" />
             </div>
-            <div class="form-group">
-              <img src="icons/password.svg" alt="" />
+            <div class="form-group pass-div">
+              <img src="/icons/passwordReset.svg" class="first" alt="" />
               <input
                 id="password"
-                type="text"
+                type="password"
                 placeholder="Enter your password"
               />
+              <img src="/icons/password.svg" class="toggle-password" alt="" />
               <small class="forgot-pass">Forgot password</small>
             </div>
             <button class="signin-btn">GET STARTED</button>
@@ -609,19 +616,33 @@
           </section>
           <section class="section-2">
             <div class="form-group">
-              <img src="icons/user.svg" alt="" />
+              <img src="/icons/user.svg" class="first" alt="" />
               <input id="name" type="text" placeholder="Enter your name" />
             </div>
             <div class="form-group">
-              <img src="icons/message.svg" alt="" />
+              <img
+                src="/icons/message.svg"
+                class="first"
+                alt=""
+              />
               <input class="email" type="text" placeholder="Enter your email" />
             </div>
             <div class="form-group">
-              <img src="icons/password.svg" alt="" />
+              <img
+                src="/icons/passwordReset.svg"
+                class="first"
+                alt=""
+              />
+
               <input
                 class="password"
-                type="text"
+                type="password"
                 placeholder="Enter your password"
+              />
+              <img
+                src="/icons/password.svg"
+                class="toggle-password"
+                alt=""
               />
             </div>
             <button id="sendOtp" class="signUp">GET STARTED</button>
@@ -723,6 +744,19 @@
         e.preventDefault();
         forgotContainer.classList.remove("active");
       });
+      document.querySelectorAll(".toggle-password").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const passwordField = this.previousElementSibling;
+          if (passwordField.type === "password") {
+            passwordField.type = "text";
+            this.src = "/icons/unlock.svg"; // Change back to a closed-eye icon
+          } else {
+            passwordField.type = "password";
+            this.src = "/icons/password.svg"; // Change to an open-eye icon
+          }
+        });
+      });
+
       sendMailBtn.addEventListener("click", (e) => {
         e.preventDefault();
         if (!forgotContainer.classList.contains("active")) {

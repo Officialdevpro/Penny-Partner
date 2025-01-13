@@ -479,7 +479,7 @@ i q {
     rgb(0, 255, 213),
     rgb(230, 0, 255)
   );
-  -webkit-background-clip: text;
+ 
   -webkit-text-fill-color: transparent;
 }
 .privacy-container section ul li {
